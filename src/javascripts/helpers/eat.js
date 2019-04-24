@@ -5,7 +5,7 @@ const healthyEat = 10;
 const unhealthyEat = 3;
 
 const addEat = () => {
-  if (eat < 97) {
+  if (eat < 97 && eat > 0) {
     eat += healthyEat;
   } else if (eat >= 91) {
     eat = 100;
@@ -29,8 +29,9 @@ const addEvents = () => {
 
 const domStringBuilder = () => {
   let domString = '';
-  domString += '<div>';
-  domString += `<div>Full: <span id="score">${eat}</span></div>`;
+  domString += '<div class="showDisplay">';
+  domString += '<p class="displayName">Eat!</p>';
+  domString += `<p>Full: <span id="score">${eat}</span></p>`;
   domString += '</div>';
   domString += '<button id="healthyBtn">Healthy Food</button>';
   domString += '<button id="unhealthyBtn">Unhealthy Food</button>';

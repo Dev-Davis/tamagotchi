@@ -5,10 +5,10 @@ const fight = 10;
 const runAway = 1;
 
 const addFight = () => {
-  if (fightClub <= 100) {
+  if (fightClub < 100) {
     fightClub += runAway;
-  } else if (fightClub === 0) {
-    fightClub = 0;
+  } else if (fightClub <= 100) {
+    fightClub = 100;
   }
   util.printToDom('fightScore', fightClub);
 };
@@ -30,8 +30,9 @@ const addEvents = () => {
 
 const domStringBuilder = () => {
   let domString = '';
-  domString += '<div>';
-  domString += `<div>Full: <span id="fightScore">${fightClub}</span></div>`;
+  domString += '<div class="showDisplay">';
+  domString += '<p class="displayName">Fight!</p>';
+  domString += `<p>Full: <span id="fightScore">${fightClub}</span></p>`;
   domString += '</div>';
   domString += '<button id="runBtn">Run</button>';
   domString += '<button id="fightBtn">Fight</button>';

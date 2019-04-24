@@ -14,7 +14,7 @@ const addNap = () => {
 };
 
 const addSleep = () => {
-  if (sleepyTime < 100) {
+  if (sleepyTime < 40) {
     sleepyTime += deepSleep;
   } else if (sleepyTime === 100) {
     sleepyTime = 100;
@@ -29,7 +29,7 @@ const addEvents = () => {
 
 const domStringBuilder = () => {
   let domString = '';
-  domString += '<div>';
+  domString += '<div class="showDisplay">';
   domString += '<div class="displayName">Sleepy Time!</div>';
   domString += `<div>Full: <span id="sleepScore">${sleepyTime}</span></div>`;
   domString += '</div>';
