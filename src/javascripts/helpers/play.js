@@ -10,7 +10,6 @@ const addFun = () => {
   } else if (funPlay >= 91) {
     funPlay = 100;
   }
-  // console.error(funPlay);
   util.printToDom('playScore', funPlay);
 };
 
@@ -34,10 +33,11 @@ const domStringBuilder = () => {
   domString += '<p class="displayName">Play!</p>';
   domString += `<p>Play: <span id="playScore">${funPlay}</span></p>`;
   domString += '</div>';
+  domString += '<div class="playBtnBox">';
   domString += '<button id="funBtn">Fun</button>';
   domString += '<button id="superFunBtn">Super Fun</button>';
+  domString += '</div>';
   util.printToDom('play', domString);
   addEvents();
 };
-
 export default { domStringBuilder, addFun, addSupFun };

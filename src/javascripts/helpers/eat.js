@@ -33,10 +33,11 @@ const domStringBuilder = () => {
   domString += '<p class="displayName">Eat!</p>';
   domString += `<p>Full: <span id="score">${eat}</span></p>`;
   domString += '</div>';
+  domString += '<div class="eatBtnBox">';
   domString += '<button id="healthyBtn">Healthy Food</button>';
   domString += '<button id="unhealthyBtn">Unhealthy Food</button>';
+  domString += '</div>';
   util.printToDom('eat', domString);
   addEvents();
 };
-
 export default { domStringBuilder, subEat, addEat };
