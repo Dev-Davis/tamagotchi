@@ -40,5 +40,4 @@ const domStringBuilder = () => {
   util.printToDom('play', domString);
   addEvents();
 };
-
 export default { domStringBuilder, addFun, addSupFun };

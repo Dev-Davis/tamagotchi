@@ -41,5 +41,4 @@ const domStringBuilder = () => {
   util.printToDom('fight', domString);
   addEvents();
 };
-
 export default { domStringBuilder, subFight, addFight };

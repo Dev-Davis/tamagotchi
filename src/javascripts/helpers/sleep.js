@@ -40,5 +40,4 @@ const domStringBuilder = () => {
   util.printToDom('sleep', domString);
   addEvents();
 };
-
 export default { domStringBuilder, addSleep, addNap };

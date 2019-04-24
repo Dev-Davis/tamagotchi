@@ -40,5 +40,4 @@ const domStringBuilder = () => {
   util.printToDom('eat', domString);
   addEvents();
 };
-
 export default { domStringBuilder, subEat, addEat };
