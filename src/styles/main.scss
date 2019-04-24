@@ -63,25 +63,25 @@ body {
 }
 
 img {
-    z-index: 1;
-    display: block;
-    margin: auto;
-    margin-top: 100px;
-    border-radius: 50%;
-    width: 355px;
-    height: 355px;
+  z-index: 1;
+  display: block;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 50%;
+  width: 355px;
+  height: 355px;
 }
 
 #eat, #play, #fight, #sleep {
-  z-index: -1;
+z-index: -1;
 }
 
 .sleepBtnBox {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  right: 0;
-  bottom: 0;
-  background: red;
-  padding: 15px;
+position: absolute;
+top: 50%;
+left: 50%;
+right: 0;
+bottom: 0;
+background: red;
+padding: 15px;
 }
