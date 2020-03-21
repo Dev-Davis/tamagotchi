@@ -1,6 +1,6 @@
 import util from './util';
 
-let eat = 10;
+let eat = 50;
 const healthyEat = 5;
 const unhealthyEat = 5;
 

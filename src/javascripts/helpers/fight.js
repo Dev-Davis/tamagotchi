@@ -32,11 +32,11 @@ const domStringBuilder = () => {
   let domString = '';
   domString += '<div class="showDisplay">';
   domString += '<p class="displayName">Fight!</p>';
-  domString += `<p>Full: <span id="fightScore">${fightClub}</span></p>`;
+  domString += `<p>Fighting: <span id="fightScore">${fightClub}</span></p>`;
   domString += '</div>';
   domString += '<div class="fightBtnBox">';
-  domString += '<button id="runBtn">Run</button>';
-  domString += '<button id="fightBtn">Fight</button>';
+  domString += '<button id="runBtn" class="btn btn-primary">Run</button>';
+  domString += '<button id="fightBtn" class="btn btn-danger">Fight</button>';
   domString += '</div>';
   util.printToDom('fight', domString);
   addEvents();
