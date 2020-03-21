@@ -1,23 +1,23 @@
 import util from './util';
 
-let eat = 100;
-const healthyEat = 10;
-const unhealthyEat = 3;
+let eat = 10;
+const healthyEat = 5;
+const unhealthyEat = 5;
 
 const addEat = () => {
-  if (eat < 97 && eat > 0) {
+  if (eat < 100 && eat >= 0) {
     eat += healthyEat;
-  } else if (eat >= 91) {
+  } else if (eat > 90) {
     eat = 100;
   }
   util.printToDom('score', eat);
 };
 
 const subEat = () => {
-  if (eat <= 100) {
+  if (eat > 0 && eat <= 100) {
     eat -= unhealthyEat;
-  } else if (eat === 100) {
-    eat = 100;
+  } else if (eat <= 0) {
+    eat = 0;
   }
   util.printToDom('score', eat);
 };
@@ -31,11 +31,11 @@ const domStringBuilder = () => {
   let domString = '';
   domString += '<div class="showDisplay">';
   domString += '<p class="displayName">Eat!</p>';
-  domString += `<p>Full: <span id="score">${eat}</span></p>`;
+  domString += `<p>Fullness: <span id="score">${eat}</span></p>`;
   domString += '</div>';
   domString += '<div class="eatBtnBox">';
-  domString += '<button id="healthyBtn">Healthy Food</button>';
-  domString += '<button id="unhealthyBtn">Unhealthy Food</button>';
+  domString += '<button id="healthyBtn" class="btn btn-primary">Healthy Food</button>';
+  domString += '<button id="unhealthyBtn" class="btn btn-danger">Unhealthy Food</button>';
   domString += '</div>';
   util.printToDom('eat', domString);
   addEvents();
