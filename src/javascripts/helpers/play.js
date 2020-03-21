@@ -1,22 +1,22 @@
 import util from './util';
 
 let funPlay = 50;
-const fun = 5;
+const fun = 10;
 const bored = 10;
 
 const addFun = () => {
-  if (funPlay < 97) {
+  if (funPlay < 100 && funPlay >= 0) {
     funPlay += fun;
-  } else if (funPlay >= 90) {
+  } else if (funPlay > 90) {
     funPlay = 100;
   }
   util.printToDom('playScore', funPlay);
 };
 
 const subBored = () => {
-  if (funPlay <= 100) {
+  if (funPlay > 0 && funPlay <= 100) {
     funPlay -= bored;
-  } else if (funPlay <= 10) {
+  } else if (funPlay < 0) {
     funPlay -= 10 && funPlay === null;
   }
   util.printToDom('playScore', funPlay);
