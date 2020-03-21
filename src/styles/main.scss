@@ -2,58 +2,19 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  background-color: red;
+  // some content
 }
 
-#eat {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 50%;
-  bottom: 50%;
-  background: blue;
-  border: solid 1px black;
-  padding: 15px;
-}
-
-#play {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 0;
-  bottom: 50%;
-  background: red;
-  border: solid 1px black;
-  padding: 15px;
-}
-
-#fight {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 50%;
-  bottom: 0;
-  background: red;
-  border: solid 1px black;
-  padding: 15px;
-}
-
-#sleep {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  right: 0;
-  bottom: 0;
-  background: red;
-  border: solid 1px black;
-  padding: 15px;
+.pet-display {
+  background-image: url('https://wallpaperhd.wiki/wp-content/uploads/8-bit-game-wallpaper-1a45af66491977738aa4cb60298c636f.jpg');
+  background-size: cover;
 }
 
 .displayName {
   font-size: 24px;
 }
 
-#healthyBtn, #unhealthyBtn {
+#healthyBtn, #unhealthyBtn, #funBtn, #boredBtn, #napBtn, #sleepBtn, #runBtn, #fightBtn {
   border-top-left-radius: 8px;
   margin-right: 20px;
 }
@@ -66,22 +27,19 @@ img {
   z-index: 1;
   display: block;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 2rem
+  ;
   border-radius: 50%;
   width: 355px;
   height: 355px;
+  border: 1px solid rgb(207, 207, 207);
 }
 
-#eat, #play, #fight, #sleep {
-z-index: -1;
+.pet-display {
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgb(207, 207, 207);
 }
 
-.sleepBtnBox {
-position: absolute;
-top: 50%;
-left: 50%;
-right: 0;
-bottom: 0;
-background: red;
-padding: 15px;
+.the-buttons {
+  padding-top: 2rem;
 }

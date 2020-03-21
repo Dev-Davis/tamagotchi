@@ -2,7 +2,7 @@ import util from './util';
 
 let sleepyTime = 50;
 const nap = 10;
-const deepSleep = 60;
+const awake = 10;
 
 const addNap = () => {
   if (sleepyTime < 97) {
@@ -13,9 +13,9 @@ const addNap = () => {
   util.printToDom('sleepScore', sleepyTime);
 };
 
-const addSleep = () => {
+const ansomnia = () => {
   if (sleepyTime <= 50) {
-    sleepyTime += deepSleep;
+    sleepyTime -= awake;
   } else if (sleepyTime <= 100) {
     sleepyTime = 100;
   }
@@ -24,20 +24,20 @@ const addSleep = () => {
 
 const addEvents = () => {
   document.getElementById('napBtn').addEventListener('click', addNap);
-  document.getElementById('sleepBtn').addEventListener('click', addSleep);
+  document.getElementById('awakeBtn').addEventListener('click', ansomnia);
 };
 
 const domStringBuilder = () => {
   let domString = '';
   domString += '<div class="showDisplay">';
-  domString += '<div class="displayName">Sleepy Time!</div>';
-  domString += `<div>Full: <span id="sleepScore">${sleepyTime}</span></div>`;
+  domString += '<p class="displayName">Sleepy Time!</p>';
+  domString += `<p>Sleepiness: <span id="sleepScore">${sleepyTime}</span></p>`;
   domString += '</div>';
-  domString += '<div class="sleepBtnBox">';
-  domString += '<button id="napBtn">Nap</button>';
-  domString += '<button id="sleepBtn">Deep Sleep</button>';
+  domString += '<div class="awakeBtnBox">';
+  domString += '<button id="napBtn" class="btn btn-primary">Nap</button>';
+  domString += '<button id="awakeBtn" class="btn btn-danger">Awake</button>';
   domString += '</div>';
   util.printToDom('sleep', domString);
   addEvents();
 };
-export default { domStringBuilder, addSleep, addNap };
+export default { domStringBuilder, ansomnia, addNap };
