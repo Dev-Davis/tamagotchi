@@ -2,22 +2,22 @@ import util from './util';
 
 let fightClub = 100;
 const fight = 10;
-const runAway = 1;
+const runAway = 10;
 
 const addFight = () => {
-  if (fightClub < 100) {
+  if (fightClub < 100 && fightClub >= 0) {
     fightClub += runAway;
-  } else if (fightClub <= 100) {
+  } else if (fightClub > 90) {
     fightClub = 100;
   }
   util.printToDom('fightScore', fightClub);
 };
 
 const subFight = () => {
-  if (fightClub >= 10) {
+  if (fightClub > 0 && fightClub <= 100) {
     fightClub -= fight;
-  } else if (fightClub <= 99) {
-    fightClub = 100;
+  } else if (fightClub <= 0) {
+    fightClub = 0;
   }
   util.printToDom('fightScore', fightClub);
 };
@@ -32,9 +32,9 @@ const domStringBuilder = () => {
   let domString = '';
   domString += '<div class="showDisplay">';
   domString += '<p class="displayName">Fight!</p>';
-  domString += `<p>Fighting: <span id="fightScore">${fightClub}</span></p>`;
+  domString += `<p class="category-title">Fighting: <span id="fightScore">${fightClub}</span></p>`;
   domString += '</div>';
-  domString += '<div class="fightBtnBox">';
+  domString += '<div class="btnBox">';
   domString += '<button id="runBtn" class="btn btn-primary">Run</button>';
   domString += '<button id="fightBtn" class="btn btn-danger">Fight</button>';
   domString += '</div>';

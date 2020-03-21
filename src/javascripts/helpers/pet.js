@@ -9,7 +9,7 @@ const domStringBuilder = () => {
   let domString = '';
 
   domString += '<div>';
-  domString += `<h3 class="text-center">${pet.name}</h3>`;
+  domString += `<h3 class="pet-name text-center"><span class="json-name">${pet.name}</span></h3>`;
   domString += `<img class="petPic" src="${pet.pic1}">`;
   domString += '</div>';
 

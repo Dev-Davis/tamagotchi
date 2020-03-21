@@ -31,9 +31,9 @@ const domStringBuilder = () => {
   let domString = '';
   domString += '<div class="showDisplay">';
   domString += '<p class="displayName">Eat!</p>';
-  domString += `<p>Fullness: <span id="score">${eat}</span></p>`;
+  domString += `<p class="category-title">Fullness: <span id="score">${eat}</span></p>`;
   domString += '</div>';
-  domString += '<div class="eatBtnBox">';
+  domString += '<div class="btnBox">';
   domString += '<button id="healthyBtn" class="btn btn-primary">Healthy Food</button>';
   domString += '<button id="unhealthyBtn" class="btn btn-danger">Unhealthy Food</button>';
   domString += '</div>';
