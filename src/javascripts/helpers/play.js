@@ -30,10 +30,10 @@ const addEvents = () => {
 const domStringBuilder = () => {
   let domString = '';
   domString += '<div class="showDisplay">';
-  domString += '<p class="displayName">Play!</p>';
-  domString += `<p>Fun Time: <span id="playScore">${funPlay}</span></p>`;
+  domString += '<p  class="displayName">Play!</p>';
+  domString += `<p class="category-title">Fun Time: <span id="playScore">${funPlay}</span></p>`;
   domString += '</div>';
-  domString += '<div class="playBtnBox">';
+  domString += '<div class="btnBox">';
   domString += '<button id="funBtn" class="btn btn-primary">Fun</button>';
   domString += '<button id="boredBtn" class="btn btn-danger">Bored</button>';
   domString += '</div>';
