@@ -2,7 +2,7 @@ import util from './util';
 
 let eat = 50;
 const healthyEat = 5;
-const unhealthyEat = 5;
+const unhealthyEat = 10;
 
 const addEat = () => {
   if (eat < 100 && eat >= 0) {
